@@ -1,0 +1,418 @@
+C:\Users\Suharshith Oruganti\Desktop>irb
+irb(main):001:0> File.open("novel.txt" , "w") do |file|
+irb(main):002:1* file.puts "It was a dark knight"
+irb(main):003:1> end
+=> nil
+
+irb(main):017:0> str = "String beans are tasty!"
+=> "String beans are tasty!"
+irb(main):018:0> puts str [0,11]
+String bean
+=> nil
+irb(main):019:0> puts str [7,11]
+beans are t
+=> nil
+irb(main):020:0> puts str [7,4]
+bean
+=> nil
+
+irb(main):023:0> str [0,6] = "Green"
+=> "Green"
+irb(main):024:0> str
+=> "Green beans are tasty!"
+irb(main):025:0> puts str
+Green beans are tasty!
+=> nil
+irb(main):026:0> str [0,6] = ""
+=> ""
+irb(main):027:0> puts str
+beans are tasty!
+=> nil
+irb(main):028:0> puts str[-1]
+!
+=> nil
+irb(main):029:0> puts str[-6]
+t
+=> nil
+irb(main):030:0> puts str[-1,6]
+!
+=> nil
+irb(main):031:0> puts str[-6,6]
+tasty!
+=> nil
+irb(main):032:0> puts str[-10,10]
+are tasty!
+=> nil
+irb(main):033:0> puts str[7..10]
+re t
+=> nil
+irb(main):034:0> str [0,6] = "Green"
+=> "Green"
+irb(main):035:0> puts str[7..10]
+e ta
+=> nil
+irb(main):036:0> str [0,6] = "String"
+=> "String"
+irb(main):037:0> puts str[7..10]
+e ta
+=> nil
+irb(main):038:0> puts str
+Stringre tasty!
+=> nil
+irb(main):039:0> str = "string beans are tasty!"
+=> "string beans are tasty!"
+irb(main):040:0> puts str[7..10]
+bean
+=> nil
+
+irb(main):042:0> puts str[-6..1]
+
+=> nil
+
+irb(main):044:0> puts str
+string beans are tasty!
+=> nil
+irb(main):045:0> puts str[-6..-1]
+tasty!
+=> nil
+irb(main):046:0> str = "Supercalifragilisticexpialidocios even though the sound of it somethong quite atrocious"
+=> "Supercalifragilisticexpialidocios even though the sound of it somethong quite atrocious"
+irb(main):047:0> puts str.index("even")
+34
+=> nil
+irb(main):048:0> str = "Supercalifragilisticexpialidocious even though the sound of it somethong quite atrocious"
+=> "Supercalifragilisticexpialidocious even though the sound of it somethong quite atrocious"
+irb(main):049:0> puts str.index("even")
+35
+=> nil
+irb(main):050:0> puts str[35,4]
+even
+=> nil
+irb(main):051:0> new_str = str.sub("atrocious", "delicious")
+=> "Supercalifragilisticexpialidocious even though the sound of it somethong quite delicious"
+
+irb(main):053:0> puts new_str
+Supercalifragilisticexpialidocious even though the sound of it somethong quite delicious
+=> nil
+irb(main):054:0> new_str = "Supercalifragilisticexpialidocious even though the sound of it somethong quite atrocious atrocious"
+=> "Supercalifragilisticexpialidocious even though the sound of it somethong quite atrocious atrocious"
+
+irb(main):056:0> new_str1 = new_str.sub("atrocious", "delicious")
+=> "Supercalifragilisticexpialidocious even though the sound of it somethong quite delicious atrocious"
+irb(main):057:0> new_str = "Supercalifragilisticexpialidocious even though the sound of it somethong quite atrocious atrocious"
+=> "Supercalifragilisticexpialidocious even though the sound of it somethong quite atrocious atrocious"
+irb(main):058:0> new_str1 = new_str.gsub("atrocious", "delicious")
+=> "Supercalifragilisticexpialidocious even though the sound of it somethong quite delicious delicious"
+irb(main):059:0> puts new_str1.include?("atrocious")
+false
+=> nil
+irb(main):060:0> puts new_str1.include?("deli")
+true
+=> nil
+irb(main):061:0> if new_str1.include("delicious")
+irb(main):062:1> raise "error"
+irb(main):063:1> end
+NoMethodError: undefined method `include' for #<String:0x0000000004e12158>
+Did you mean?  include?
+        from (irb):61
+        from C:/Ruby24-x64/bin/irb.cmd:19:in `<main>'
+irb(main):064:0> if new_str.include("atrocious")
+irb(main):065:1> if new_str.include("atrocious")
+irb(main):066:2> end
+irb(main):067:1> message = "Error: 404 - Page not found"
+irb(main):068:1> if message.include("Error")
+irb(main):069:2>  raise "Error occured: #{message}"
+irb(main):070:2> end
+irb(main):071:1> puts "monday".capitalize
+irb(main):072:1> puts "monday".capitalize
+
+C:\Users\Suharshith Oruganti\Desktop>irb
+irb(main):001:0> puts "monday".capitalize
+Monday
+=> nil
+irb(main):002:0> puts "MONDAY".downcase
+monday
+=> nil
+irb(main):003:0> puts "monday".reverse
+yadnom
+=> nil
+irb(main):004:0> puts "This string is 33 characters long".length
+33
+=> nil
+
+irb(main):006:0> puts "Suharshith Oruganti".count("s")
+1
+=> nil
+irb(main):007:0> puts "Suharshith Oruganti".count("h")
+3
+=> nil
+irb(main):008:0> puts "Suharshith Oruganti".count("S")
+1
+=> nil
+irb(main):009:0> puts "suharshith oruganti".count("s")
+2
+=> nil
+irb(main):010:0> input = gets
+hello?
+=> "hello?\n"
+irb(main):011:0> puts input.length
+7
+=> nil
+irb(main):012:0> input.dump
+=> "\"hello?\\n\""
+irb(main):013:0> chomped_input = input.chomp
+=> "hello?"
+irb(main):014:0> puts chomped_input.length
+6
+=> nil
+irb(main):015:0> chomped_input.dump
+=> "\"hello?\""
+irb(main):016:0> chomped_input.chop
+=> "hello"
+irb(main):017:0> in = gets
+SyntaxError: (irb):17: syntax error, unexpected keyword_in
+in = gets
+  ^
+        from C:/Ruby24-x64/bin/irb.cmd:19:in `<main>'
+irb(main):018:0> inp = gets
+hello world!
+=> "hello world!\n"
+irb(main):019:0> inp.chomp
+=> "hello world!"
+irb(main):020:0> inp.chop
+=> "hello world!"
+irb(main):021:0> inp.chop
+=> "hello world!"
+irb(main):022:0> puts inp.chop
+hello world!
+=> nil
+irb(main):023:0> puts inp.strip
+hello world!
+=> nil
+irb(main):024:0> str = "           hello         "
+=> "           hello         "
+irb(main):025:0> puts str.strip
+hello
+=> nil
+irb(main):026:0> puts str
+           hello
+=> nil
+irb(main):027:0> puts str.strip
+hello
+=> nil
+irb(main):028:0> str = "Oatmeal cookies are tasty."
+=> "Oatmeal cookies are tasty."
+irb(main):029:0> str[0,7] = "Chocolate"
+=> "Chocolate"
+irb(main):030:0> puts str
+Chocolate cookies are tasty.
+=> nil
+irb(main):031:0> str = "Ruby is a great scripting language!"
+=> "Ruby is a great scripting language!"
+irb(main):032:0>  puts str[-9..-1]
+language!
+=> nil
+irb(main):033:0> str = "\rhello\r\n"
+=> "\rhello\r\n"
+irb(main):034:0> str.chop
+=> "\rhello"
+irb(main):035:0> str = "Ruby is a great way to spend the afternoon"
+=> "Ruby is a great way to spend the afternoon"
+irb(main):036:0> str[0,4] = ""
+=> ""
+irb(main):037:0> puts str
+ is a great way to spend the afternoon
+=> nil
+irb(main):038:0> str = "Ruby is a great way to spend the afternoon"
+=> "Ruby is a great way to spend the afternoon"
+irb(main):039:0> str[0,3] = ""
+=> ""
+irb(main):040:0> puts str
+y is a great way to spend the afternoon
+=> nil
+irb(main):041:0> str = "\rhello\r\n"
+=> "\rhello\r\n"
+irb(main):042:0> str.chomp
+=> "\rhello"
+irb(main):043:0> str.chop
+=> "\rhello"
+irb(main):044:0> str.strip
+=> "hello"
+irb(main):045:0> str = "Scripting in Ruby is fun!"
+=> "Scripting in Ruby is fun!"
+irb(main):046:0> puts str[12,5]
+ Ruby
+=> nil
+irb(main):047:0> puts str[13,5]
+Ruby
+=> nil
+irb(main):048:0> puts str[13,4]
+Ruby
+=> nil
+irb(main):049:0> str = "Ruby makes automation "
+=> "Ruby makes automation "
+irb(main):050:0> str[-1,4] = "easy"
+=> "easy"
+irb(main):051:0> puts str
+Ruby makes automationeasy
+=> nil
+irb(main):052:0> str[-1] = "easy"
+=> "easy"
+irb(main):053:0> puts str
+Ruby makes automationeaseasy
+=> nil
+irb(main):054:0> str = "Ruby makes automation "
+=> "Ruby makes automation "
+irb(main):055:0> str[-1] = "easy"
+=> "easy"
+irb(main):056:0> puts str
+Ruby makes automationeasy
+=> nil
+irb(main):057:0> str[-1] = " easy"
+=> " easy"
+irb(main):058:0> str = "Ruby makes automation "
+=> "Ruby makes automation "
+irb(main):059:0> str[-1] = " easy"
+=> " easy"
+irb(main):060:0> puts str
+Ruby makes automation easy
+=> nil
+irb(main):061:0> /$/ =~ "$10.00"
+=> 6
+irb(main):062:0> /\$/ =~ "$10.00"
+=> 0
+
+irb(main):064:0> /\// =~ "forward/slash"
+=> 7
+irb(main):065:0> %r{$} =~ "$10.00"
+=> 6
+irb(main):066:0> %r{/} =~ "forward/slash"
+=> 7
+irb(main):067:0> /1 \+ 2 = 3\?/.match('Does 1 + 2 = 3?')
+=> #<MatchData "1 + 2 = 3?">
+irb(main):068:0> /[0-9a-f]/.match('9f')
+=> #<MatchData "9">
+irb(main):069:0> /[8f9f]/.match('9f')
+=> #<MatchData "9">
+irb(main):070:0> /[9f]/.match('8f6f9f')
+=> #<MatchData "f">
+irb(main):071:0> "    a b c".gsub(/ /, '_')
+=> "____a_b_c"
+irb(main):072:0> "hello, world".match(/,/, 3)
+=> #<MatchData ",">
+irb(main):073:0> m = /s(\w{2}).*(c)/.match('haystack')
+=> #<MatchData "stac" 1:"ta" 2:"c">
+irb(main):074:0> $`
+=> "hay"
+irb(main):075:0> /R.*y/.match("Ruby", 1)
+=> nil
+irb(main):076:0> /R.*y/.match("Ruby")
+=> #<MatchData "Ruby">
+irb(main):077:0> m = /Ruby/.match("Scripting with Ruby")
+=> #<MatchData "Ruby">
+irb(main):078:0> puts m.string
+Scripting with Ruby
+=> nil
+irb(main):079:0> m.regexp
+=> /Ruby/
+irb(main):080:0> puts m.to_s
+Ruby
+=> nil
+irb(main):081:0> puts m.pre_match
+Scripting with
+=> nil
+irb(main):082:0> puts m.post_match
+
+=> nil
+irb(main):083:0> /Emerald/.match("Scripting with Ruby!") do |m|
+irb(main):084:1*    puts m.to_s
+irb(main):085:1> end
+=> nil
+irb(main):086:0> m = /(abc).*(123).*/i.match("abcdefg1234567")
+=> #<MatchData "abcdefg1234567" 1:"abc" 2:"123">
+irb(main):087:0> puts m.captures.inspect
+["abc", "123"]
+=> nil
+irb(main):088:0> puts m[0]
+abcdefg1234567
+=> nil
+irb(main):089:0> puts m[1]
+abc
+=> nil
+irb(main):090:0> puts m[2]
+123
+=> nil
+irb(main):091:0> regex = /[Rr]uby/
+=> /[Rr]uby/
+irb(main):092:0> m1 = regex.match("Ruby")
+=> #<MatchData "Ruby">
+irb(main):093:0> puts m1.to_s
+Ruby
+=> nil
+irb(main):094:0> m2 = regex.match("ruby")
+=> #<MatchData "ruby">
+irb(main):095:0> puts m2.to_s
+ruby
+=> nil
+irb(main):096:0> m = /[0-9]/.match("2")
+=> #<MatchData "2">
+irb(main):097:0> puts m.to_s
+2
+=> nil
+irb(main):098:0> puts /[a-z0-9]/.match("m")
+m
+=> nil
+
+irb(main):100:0> puts /[a-z0-9]/.match("8")
+8
+=> nil
+irb(main):101:0> puts /\d/.match("m")
+
+=> nil
+irb(main):102:0> puts /\d/.match("m").to_s
+
+=> nil
+irb(main):103:0> puts /\d/.match("8").to_s
+8
+=> nil
+irb(main):104:0> puts /\d{3}/.match("123456").to_s
+123
+=> nil
+irb(main):105:0> regex = /\[(\d+)\]/
+=> /\[(\d+)\]/
+irb(main):106:0> str = "July 31 7:51:45 mycomp bad_process[12345]:Error"
+=> "July 31 7:51:45 mycomp bad_process[12345]:Error"
+irb(main):107:0> results = regex.match(str)
+=> #<MatchData "[12345]" 1:"12345">
+irb(main):108:0> puts results.captures
+12345
+=> nil
+irb(main):109:0> s = "You say tomato, I say tomahto"
+=> "You say tomato, I say tomahto"
+irb(main):110:0> puts s.sub(/tomah?to/, "banana")
+You say banana, I say tomahto
+=> nil
+irb(main):111:0> puts s.gsub(/tomah?to/, "banana")
+You say banana, I say banana
+=> nil
+irb(main):112:0> "Ruby".scan(/./) do |letter|
+irb(main):113:1*
+Display all 358 possibilities? (y or n)
+irb(main):113:1*
+Display all 358 possibilities? (y or n)
+irb(main):113:1*     puts letter
+irb(main):114:1> end
+R
+u
+b
+y
+=> "Ruby"
+irb(main):115:0> octets = "192.168.10.1".split(/\./)
+=> ["192", "168", "10", "1"]
+irb(main):116:0> octets.each { |octet| puts octet }
+192
+168
+10
+1
+=> ["192", "168", "10", "1"]
+irb(main):117:0>
