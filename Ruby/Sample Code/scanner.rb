@@ -6,7 +6,7 @@ def calculate_network_range(ip, mask)
 	ip_range = IPAddr.new(address).to_range.map { |ip_object| ip_object.to_s }
 end
 
-def scan_range(ip_address)
+def scan_range(ip_range)
 	active_ips = ip_range.select { |ip| Net::Ping::External.new(ip).ping? }
 end
 
